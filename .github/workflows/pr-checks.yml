@@ -116,7 +116,7 @@ jobs:
         run: |
           # Create local D1 database for testing
           npx wrangler d1 create petition-test-db --local || echo "Database already exists"
-          
+
           # Run database migrations
           npx wrangler d1 execute petition-test-db --local --file=./src/db/migrations/consolidated_setup.sql || echo "Database setup completed"
 
